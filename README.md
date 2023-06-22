@@ -92,6 +92,20 @@ export ASDF_NODEJS_LEGACY_FILE_DYNAMIC_STRATEGY=latest_available
 
 > **NOTE**: Partial versions and codenames only work for legacy version files: `.node-version` and `.nvmrc`.
 
+### Installing the latest LTS
+
+To get the latest LTS version:
+
+```
+asdf nodejs resolve lts
+```
+
+To install the latest LTS:
+
+```
+asdf install nodejs $(asdf nodejs resolve lts --latest-available)
+```
+
 ### Default npm Packages
 
 `asdf-nodejs` can automatically install a set of default set of npm package right after installing a Node.js version. To enable this feature, provide a `$HOME/.default-npm-packages` file that lists one package per line, for example:
